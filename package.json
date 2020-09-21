@@ -1,0 +1,17 @@
+{
+  "name": "paint-be",
+  "version": "1.0.0",
+  "description": "BE for reviews",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "author": "Sean Doyle",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "node.js": "0.0.1-security"
+  }
+}
