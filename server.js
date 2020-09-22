@@ -1,6 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 const port = 3333
+// axios?
 
 const server = express()
 server.use(express.json())
@@ -35,6 +36,7 @@ server.get('/reviews', (req, res) => {
 })
 let reviewId = review.length
 
+// axios?
 server.post('/reviews', (req, res) => {
   console.log('reviews post fired BE')
   const { name, review } = req.body
