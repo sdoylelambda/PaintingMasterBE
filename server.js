@@ -1,11 +1,13 @@
 const express = require('express')
 const cors = require('cors')
 const port = 3333
-// axios?
-
+const axios = require('axios')
+const reviewRoute = require('./review')
 const server = express()
+
 server.use(express.json())
 server.use(cors())
+server.use('/', reviewRoute)
 
 const sendUserError = (msg, res) => {
   res.status(422)
@@ -69,3 +71,5 @@ server.listen(port, (err) => {
   if (err) console.log(err)
   console.log(`server is listening on port ${port}`)
 })
+
+module.exports = server
