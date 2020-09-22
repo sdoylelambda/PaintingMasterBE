@@ -11,9 +11,10 @@ router.get('/', (req, res) => {
 })
 
 router.post('/reviews', (req, res) => {
-  const { name } = req.body
+  const name = req.body
+  console.log('post body', req.body)
 
-  ReviewModel.find()
+  ReviewModel.add(name)
     .then((rev) => res.status(200).json(rev))
     .catch((err) => res.status(500).json({ err: err.message }))
 })

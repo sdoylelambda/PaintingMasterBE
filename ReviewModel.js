@@ -7,7 +7,11 @@ module.exports = {
 }
 
 function find() {
-  return db('reviews as r') //.join('name as n').select('r.name', 'r.review')
+  return db('reviews') //.join('name as n').select('r.name', 'r.review')
+}
+
+function findById(id) {
+  return db('reviews').where({ id }).first()
 }
 
 // check 'review'
