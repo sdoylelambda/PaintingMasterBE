@@ -10,7 +10,7 @@
   "author": "Sean Doyle",
   "license": "ISC",
   "dependencies": {
-    "node": "^12.18.3",
+    "node": "^12.x",
     "axios": "^0.20.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
