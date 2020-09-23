@@ -41,18 +41,18 @@ server.get('/reviews', (req, res) => {
 let reviewId = review.length
 
 // axios?
-server.post('/reviews', (req, res) => {
-  console.log('reviews post fired BE')
-  const { name, review } = req.body
-  const newReview = { name, review, id: reviewId }
-  if (!name || !review) {
-    return sendUserError('Name and review are required to post a review.', res)
-  }
+// server.post('/reviews', (req, res) => {
+//   console.log('reviews post fired BE')
+//   const { name, review } = req.body
+//   const newReview = { name, review, id: reviewId }
+//   if (!name || !review) {
+//     return sendUserError('Name and review are required to post a review.', res)
+//   }
 
-  review.push(newReview)
-  reviewId++
-  res.json(review)
-})
+//   review.push(newReview)
+//   reviewId++
+//   res.json(review)
+// })
 
 server.delete('/reviews/:id', (req, res) => {
   const { id } = req.params
