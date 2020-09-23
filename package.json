@@ -12,6 +12,11 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "node.js": "0.0.1-security"
+    "knex": "^0.21.5",
+    "migrate": "^1.7.0",
+    "node.js": "0.0.1-security",
+    "npx": "^10.2.2",
+    "pg": "^8.3.3",
+    "sqlite3": "^5.0.0"
   }
 }
