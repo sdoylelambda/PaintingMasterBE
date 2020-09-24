@@ -7,14 +7,13 @@ module.exports = {
 }
 
 function find() {
-  return db('reviews') //.join('name as n').select('r.name', 'r.review')
+  return db('reviews')
 }
 
 function findById(id) {
   return db('reviews').where({ id }).first()
 }
 
-// check 'review'
 function add(obj) {
   console.log('add obj:', obj)
   const conObj = convertData(obj)
@@ -26,10 +25,8 @@ function add(obj) {
 }
 
 function remove(id) {
-  // const id = findById(id).then((res) => {
-  return db('reviews').where({ id }).del().returning('*')
+  return db('reviews').where({ id }).del()
   console.log('id deleted:', id)
-  // })
 }
 
 // TURN THIS
