@@ -26,7 +26,7 @@ function add(obj) {
 }
 
 function remove(id) {
-  return findBy(id).then((res) => {
+  return findById(id).then((res) => {
     return db('reviews')
       .where({ id })
       .del()
