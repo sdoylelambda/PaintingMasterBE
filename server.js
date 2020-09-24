@@ -15,45 +15,45 @@ const sendUserError = (msg, res) => {
   return
 }
 
-server.get('/reviews', (req, res) => {
-  ReviewModel.find()
-    .then((rev) => res.status(200).json(rev))
-    .catch((err) => res.status(500).json({ err: err.message }))
-})
+// server.get('/reviews', (req, res) => {
+//   ReviewModel.find()
+//     .then((rev) => res.status(200).json(rev))
+//     .catch((err) => res.status(500).json({ err: err.message }))
+// })
 
-server.post('/reviews', (req, res) => {
-  const name = req.body
-  console.log('post body', req.body)
+// server.post('/reviews', (req, res) => {
+//   const name = req.body
+//   console.log('post body', req.body)
 
-  ReviewModel.add(name)
-    .then((rev) => res.status(200).json(rev))
-    .catch((err) => res.status(500).json({ err: err.message }))
-})
+//   ReviewModel.add(name)
+//     .then((rev) => res.status(200).json(rev))
+//     .catch((err) => res.status(500).json({ err: err.message }))
+// })
 
 // Probably don't need anything here (put/delete) use review.js
 
-// let review = [
-//   {
-//     name: 'Sean',
-//     review: 'Amazing work done for years!!',
-//     id: 0,
-//   },
-//   {
-//     name: 'Sean2',
-//     review: '2Amazing work done for years!!',
-//     id: 0,
-//   },
-// ]
+let review = [
+  {
+    name: 'Sean',
+    review: 'Amazing work done for years!!',
+    id: 0,
+  },
+  {
+    name: 'Sean2',
+    review: '2Amazing work done for years!!',
+    id: 0,
+  },
+]
 
-// server.get('', (req, res) => {
-//   res.json('up n running')
-// })
+server.get('', (req, res) => {
+  res.json('up n running')
+})
 
-// server.get('/reviews', (req, res) => {
-//   console.log('endpoint used!!')
-//   res.json(review)
-// })
-// let reviewId = review.length
+server.get('/reviews', (req, res) => {
+  console.log('endpoint used!!')
+  res.json(review)
+})
+let reviewId = review.length
 
 // axios?
 // server.post('/reviews', (req, res) => {
