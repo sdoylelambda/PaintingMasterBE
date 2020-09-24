@@ -25,7 +25,7 @@ function add(obj) {
 }
 
 function remove(id) {
-  return db('reviews').where({ id }).del()
+  return db('reviews').where(id).del()
   console.log('id deleted:', id)
 }
 
