@@ -21,7 +21,7 @@ router.post('/reviews', (req, res) => {
 
 router.delete('/reviews/:id', (req, res) => {
   const { id } = req.params
-  const deleted = ReviewModel.remove({ id })
+  // const deleted = ReviewModel.remove({ id })
   ReviewModel.remove({ id })
     .then((rev) => res.status(200).json(rev))
     .catch((err) => res.status(500).json({ err: err.message }))
@@ -33,7 +33,5 @@ router.delete('/reviews/:id', (req, res) => {
   //   res.status(404).json({ message: "That post does not exist." });
   // }
 })
-
-// router.delete()
 
 module.exports = router
