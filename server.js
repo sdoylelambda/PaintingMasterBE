@@ -1,6 +1,6 @@
 const express = require('express')
 const cors = require('cors')
-const port = 80 || 3333
+const port = process.env.PORT || 3333
 const axios = require('axios')
 const reviewRoute = require('./review')
 const server = express()
