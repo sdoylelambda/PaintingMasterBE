@@ -21,9 +21,10 @@ router.post('/reviews', (req, res) => {
 
 router.delete('/reviews/:id', (req, res) => {
   const { id } = req.params
+  console.log('id delete router:', id)
   // const deleted = ReviewModel.remove({ id })
   ReviewModel.remove({ id })
-    .then((rev) => res.status(200).json(rev))
+    .then((rev) => res.status(202).json(rev))
     .catch((err) => res.status(500).json({ err: err.message }))
 
   // const deleted = ReviewModel.remove({ id })
