@@ -26,12 +26,10 @@ function add(obj) {
 }
 
 function remove(id) {
-  return findById(id).then((res) => {
-    return db('reviews')
-      .where({ id })
-      .del()
-      .then(() => res)
-  })
+  // const id = findById(id).then((res) => {
+  return db('reviews').where({ id }).del().returning('*')
+  console.log('id deleted:', id)
+  // })
 }
 
 // TURN THIS
