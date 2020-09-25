@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const express = require('express')
 const cors = require('cors')
 const port = process.env.PORT || 3333
@@ -69,18 +71,18 @@ let reviewId = review.length
 //   res.json(review)
 // })
 
-server.delete('/reviews/:id', (req, res) => {
-  const { id } = req.params
-  const foundReview = reviews.find((review) => review.id == id)
+// server.delete('/reviews/:id', (req, res) => {
+//   const { id } = req.params
+//   const foundReview = reviews.find((review) => review.id == id)
 
-  if (foundReview) {
-    const ReviewRemoved = { ...foundReview }
-    reviews = reviews.filter((review) => review.id != id)
-    res.status(200).json(reviews)
-  } else {
-    sendUserError('No review ID exists in the reviews DB', res)
-  }
-})
+//   if (foundReview) {
+//     const ReviewRemoved = { ...foundReview }
+//     reviews = reviews.filter((review) => review.id != id)
+//     res.status(200).json(reviews)
+//   } else {
+//     sendUserError('No review ID exists in the reviews DB', res)
+//   }
+// })
 
 server.listen(port, (err) => {
   if (err) console.log(err)
