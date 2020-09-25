@@ -4,6 +4,7 @@ module.exports = {
   add,
   remove,
   find,
+  deleteDatabaseData,
 }
 
 function find() {
@@ -27,6 +28,10 @@ function add(obj) {
 function remove(id) {
   return db('reviews').where(id).del()
   console.log('id deleted:', id)
+}
+
+function deleteDatabaseData() {
+  return db('reviews').del()
 }
 
 // TURN THIS
